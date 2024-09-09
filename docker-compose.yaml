@@ -1,0 +1,23 @@
+networks:
+  template:
+    driver: bridge
+
+services:
+  mysql:
+    container_name: mysql-template
+    image: mysql:8.0
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: template
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: mysql
+    networks:
+      - template
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
