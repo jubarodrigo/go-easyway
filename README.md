@@ -22,7 +22,7 @@ go-easyway/
 ├── cmd/                   # Application Setup
 ├── config/
 │   └── config.go          # Configuration setup for different environments
-├── internal/              # Domain models and business logic
+├── domain/                # Domain models and business logic
 ├── pkg/   
 ├── Dockerfile             # Docker configuration for containerization
 ├── go.mod                 # Go module definition
@@ -64,8 +64,8 @@ go-easyway/
 
 ## Customizing
 
-- **Handlers**: Define the API logic and request handling inside `internal/api/handlers`.
-- **Domain**: Add domain-specific logic and models inside `internal/domain`.
+- **Handlers**: Define the API logic and request handling inside `apiserver`.
+- **Domain**: Add domain-specific logic and models inside `domain`.
 - **Configuration**: Update or extend the environment-based settings in `config/config.go`.
 
 ## Contributions
